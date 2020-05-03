@@ -1,0 +1,12 @@
+backend:
+  name: github
+  repo: TudorRotarus25/feijao-caldo-nobre
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: products
+    label: Products
+    folder: products
+    create: true
+    fields:
+      - { name: title, label: Title }
