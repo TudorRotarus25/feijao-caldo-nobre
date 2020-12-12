@@ -3,11 +3,11 @@ import { faCheckCircle, faExclamationCircle, faSpinner } from '@fortawesome/free
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
+import { graphql, useStaticQuery } from 'gatsby';
 import classes from './ContactUs.module.scss';
 import banner from '../../images/contact-us-banner.png';
 
 const API_URL = 'https://feijao-caldo-nobre-7529.twil.io/contact';
-const { RECAPTCHA_KEY } = process.env;
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -18,6 +18,18 @@ const ContactUs = () => {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [token, setToken] = useState(false);
+
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            reCaptchaKey
+          }
+        }
+      }
+    `,
+  );
 
   const onVerify = (value) => {
     console.log('verified');
@@ -70,7 +82,7 @@ const ContactUs = () => {
 
   return (
     <GoogleReCaptchaProvider
-      reCaptchaKey={RECAPTCHA_KEY}
+      reCaptchaKey={site.siteMetadata.reCaptchaKey}
       language="pr-BR"
     >
       <div

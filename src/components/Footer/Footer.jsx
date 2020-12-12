@@ -40,7 +40,7 @@ const Footer = () => (
           className={classes.icon}
           icon={faEnvelope}
         />
-        vendas@feijaocaldonobre.com.br
+        feijao@feijaocaldonobre.com.br
       </div>
       <div>
         Rua Fernandes Silva, 51 - Brás - CEP 03005-010 - São Paulo/SP
