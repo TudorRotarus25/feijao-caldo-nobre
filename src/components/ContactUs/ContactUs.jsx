@@ -32,7 +32,6 @@ const ContactUs = () => {
   );
 
   const onVerify = (value) => {
-    console.log('verified');
     setToken(value);
   };
 
