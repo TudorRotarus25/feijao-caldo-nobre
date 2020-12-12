@@ -1,0 +1,36 @@
+.ourSpace {
+  @media only screen and (min-width: 992px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 80px;
+  }
+
+  .textContainer {
+    font-size: 1.2em;
+    padding: 30px 20px 50px;
+
+    @media only screen and (min-width: 992px) {
+      flex-grow: 1;
+      padding: 0;
+    }
+
+    p {
+      max-width: 600px;
+    }
+  }
+
+  .imageContainer {
+    width: 100%;
+    max-width: 1000px;
+
+    @media only screen and (min-width: 992px) {
+      padding-left: 80px;
+    }
+
+    .image {
+      width: 100%;
+      display: block;
+    }
+  }
+}

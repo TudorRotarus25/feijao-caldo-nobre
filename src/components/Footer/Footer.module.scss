@@ -1,0 +1,53 @@
+.footer {
+  background-color: #d9b504;
+  color: #565555;
+  padding: 20px 20px 40px;
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 50px 80px;
+  }
+}
+
+.logo {
+  height: 100px;
+
+  @media screen and (min-width: 992px) {
+    height: 150px;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contentContainer {
+  padding-top: 20px;
+
+  @media screen and (min-width: 992px) {
+    padding: 0 100px;
+  }
+}
+
+.phoneNumbers {
+  @media screen and (min-width: 992px) {
+    display: flex;
+  }
+
+  & > div {
+    margin-right: 40px;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  .icon {
+    margin-right: 5px;
+  }
+}
