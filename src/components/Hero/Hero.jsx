@@ -1,6 +1,6 @@
 import React from 'react';
+import clsx from 'clsx';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import logoImage from '../../images/logo.png';
 
@@ -36,7 +36,7 @@ const Hero = () => {
           <h1>
             Nós somos a marca Feijão Caldo Nobre
           </h1>
-          <h2 className="h4">
+          <h2 className={clsx(['h4', classes.subtitle])}>
             Com grãos cuidadosamente selecionados, trazemos o melhor dos ingredientes para a sua
             mesa.
           </h2>

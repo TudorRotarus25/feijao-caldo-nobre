@@ -2,16 +2,6 @@
   position: relative;
 }
 
-.banner {
-  width: 100%;
-  display: block;
-
-  @media screen and (min-width: 992px) {
-    object-fit: cover;
-    height: 43vw;
-  }
-}
-
 .content {
   padding: 30px 20px 50px;
 

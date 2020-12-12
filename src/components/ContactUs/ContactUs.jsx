@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { faCheckCircle, faExclamationCircle, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-import { graphql, useStaticQuery } from 'gatsby';
 import classes from './ContactUs.module.scss';
-import banner from '../../images/contact-us-banner.png';
 
 const API_URL = 'https://feijao-caldo-nobre-7529.twil.io/contact';
 
@@ -19,12 +18,19 @@ const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [token, setToken] = useState(false);
 
-  const { site } = useStaticQuery(
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             reCaptchaKey
+          }
+        }
+        file(relativePath: { eq: "contact-us.jpg" }) {
+          childImageSharp {
+            fixed(width: 2000) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
@@ -86,7 +92,7 @@ const ContactUs = () => {
     >
       <div
         className={classes.contact}
-        style={{ backgroundImage: `url('${banner}')` }}
+        style={{ backgroundImage: `url('${file.childImageSharp.fixed.src}')` }}
         id="contact"
       >
         <div className={classes.content}>
