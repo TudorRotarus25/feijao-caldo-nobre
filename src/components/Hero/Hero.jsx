@@ -2,16 +2,21 @@ import React from 'react';
 import clsx from 'clsx';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import logoImage from '../../images/logo.png';
-
 import classes from './Hero.module.scss';
 
 const Hero = () => {
-  const data = useStaticQuery(graphql`
+  const { banner, logo } = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "hero-image.jpeg" }) {
+      banner: file(relativePath: { eq: "hero-image.jpeg" }) {
         childImageSharp {
           fixed(width: 2000) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      },
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 250) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -23,12 +28,12 @@ const Hero = () => {
     <div className={classes.root}>
       <div
         className={classes.content}
-        style={{ backgroundImage: `url('${data.file.childImageSharp.fixed.src}')` }}
+        style={{ backgroundImage: `url('${banner.childImageSharp.fixed.src}')` }}
       >
         <div className={classes.logoContainer}>
           <img
             className={classes.logoImage}
-            src={logoImage}
+            src={logo.childImageSharp.fixed.src}
             alt="Feijao Caldo Nobre logo"
           />
         </div>
