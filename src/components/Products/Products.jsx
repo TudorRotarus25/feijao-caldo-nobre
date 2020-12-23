@@ -115,7 +115,7 @@ const Products = () => {
     },
     {
       img: farinhaFine.childImageSharp.fixed.src,
-      name: 'Farinha de Mandioca Fine Caldo Nobre',
+      name: 'Farinha de Mandioca Fina Caldo Nobre',
     },
     {
       img: corn.childImageSharp.fixed.src,

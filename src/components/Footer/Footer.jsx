@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import classes from './Footer.module.scss';
 
 const Footer = () => {
@@ -40,14 +39,7 @@ const Footer = () => {
               className={classes.icon}
               icon={faPhoneAlt}
             />
-            (11) 3227-5882
-          </div>
-          <div className={classes.iconContainer}>
-            <FontAwesomeIcon
-              className={classes.icon}
-              icon={faWhatsapp}
-            />
-            (11) 9 9486-1774
+            (11) 3227-5882 / (11) 99498-9027
           </div>
         </div>
         <div className={classes.iconContainer}>
@@ -58,7 +50,7 @@ const Footer = () => {
           feijao@feijaocaldonobre.com.br
         </div>
         <div>
-          Rua Fernandes Silva, 51 - Brás - CEP 03005-010 - São Paulo/SP
+          Rua Alfa, 392 - 415 Galpao 1 e 2 - UNA, Itaquaquecetuba, SP - CEP 08599670
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ module.exports = {
     title: 'Feijao Caldo Nobre',
     description: 'Static website for Feijao Caldo Nobre.',
     author: 'Tudor Rotarus',
-    reCaptchaKey: process.env.RECAPTCHA_KEY,
+    reCaptchaKey: process.env.RECAPTCHA_KEY || '',
   },
   plugins: [
     'gatsby-plugin-netlify-cms',
