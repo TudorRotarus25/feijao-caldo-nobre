@@ -39,7 +39,7 @@ const Footer = () => {
               className={classes.icon}
               icon={faPhoneAlt}
             />
-            (11) 3227-5882 / (11) 99498-9027
+            (11) 4610-0075 / (11) 99498-9027
           </div>
         </div>
         <div className={classes.iconContainer}>
